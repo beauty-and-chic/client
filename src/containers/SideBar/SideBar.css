@@ -1,0 +1,127 @@
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 270px;
+}
+
+.sidebar .greatings{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  background: linear-gradient(60deg, var(--color-secondary), var(--color-main));
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.sidebar .greatings svg{
+  font-size: 24px;
+}
+
+.sidebar form{
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.sidebar form input{
+  padding: 10px 15px;
+  border: solid rgba(128, 128, 128, 0.192) 3px;
+  border-radius: 5px;
+  color:rgba(128, 128, 128, 0.829);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.sidebar form button{
+  width: 50px;
+  min-width: 50px;
+  background-color: var(--color-main);
+  border: solid var(--color-main) 3px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar .categories{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .categories h3{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sidebar .categories h3 svg{
+  font-size: 2rem;
+  color: var(--color-main)
+}
+
+.sidebar .categories .categories-list{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 250px;
+  max-height: 250px;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 20px;
+  border: solid 2px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .category{
+  width: 100%;
+  min-height: 100px;
+  max-width: 100%;
+  height: 80px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  border: dashed var(--color-main) 2px;
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.295);;
+}
+
+.sidebar .category img{
+  width: 100%;
+}
+
+.sidebar .category div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.sidebar .category p{
+  font-size: 38px;
+  background: -webkit-linear-gradient(60deg, var(--color-secondary), var(--color-main));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--family-sketch);
+}
+
+.sidebar .category:hover img{
+  width: 125%;
+}
+
+.sidebar .category div:hover{
+  backdrop-filter: unset;
+  background-color: rgba(0, 0, 0, 0.2);
+}
