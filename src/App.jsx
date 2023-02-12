@@ -1,17 +1,27 @@
 import React from 'react'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './App.css'
 
-import logo from './assets/logo.png'
+import pages from './pages'
+import containers from './containers'
+
+const { Home, Product } = pages;
+const { Header, SideBar } = containers;
 
 const App = () => {
   return (
     <div className='App'>
-      <img src={logo} alt="christelle shopping logo" />
-      <div>
-        <h1>CHRISTELLE</h1>
-        <h2>SHOPPING</h2>
-      </div>
+      <Router>
+        <Header />
+        <div className='App-body'>
+          <SideBar />
+          <Routes className='App-body--content'>
+            <Route path='/' element={ <Home /> } />
+            <Route path='/:productId' element={ <Product /> } />
+          </Routes>
+        </div>
+      </Router>
     </div>
   )
 }

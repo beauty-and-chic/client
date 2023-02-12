@@ -1,0 +1,84 @@
+.header{
+  min-width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.header-logo div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--family-sketch);
+}
+
+.header-logo h1{
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  font-size: 30px;
+}
+
+.header-logo h2{
+  display: flex;
+  padding: 5px 15px;
+  background-color: rgba(148, 207, 238);
+  color: white;
+  font-size: 24px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.header nav{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+
+.header nav .contact-info{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border: solid 1px gray;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+
+.header nav .contact-info:first-child{
+  background-color: rgba(0, 0, 0, 0.733);
+  color: white;
+  border: solid 1px black;
+}
+
+.header nav .contact-info:last-child{
+  color: var(--color-secondary);
+  border: solid 1px var(--color-secondary);
+}
+
+/* .header nav a{
+  color: var(--color-secondary);
+} */
+
+.header nav a:hover{
+  background-color: var(--color-main);
+  color: white;
+}
+
+.header nav .contact-info:last-child:hover{
+  color: white;
+  border: solid 1px var(--color-secondary);
+  background-color: var(--color-secondary);
+}
